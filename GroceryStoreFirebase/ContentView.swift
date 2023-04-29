@@ -10,11 +10,20 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isPresented: Bool = false
+    @ObservedObject private var storeListVM = StoreListViewModel()
     
     var body: some View {
         VStack {
-            Text("Hello")
+            List(storeListVM.stores, id: \.storeId) { store in
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(store.name)
+                        .font(.headline)
+                    Text(store.location)
+                        .font(.body)
+                }
+            }
         }
+        
         .sheet(isPresented: $isPresented, content: {
             AddStoreView()
         })
@@ -27,6 +36,10 @@ struct ContentView: View {
         
         .navigationTitle("Grocery App")
         .embededNavigationView()
+        
+        .onAppear(perform: {
+            storeListVM.getAll()
+        })
     }
 }
 
