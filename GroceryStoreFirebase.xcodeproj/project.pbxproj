@@ -24,6 +24,8 @@
 		EB4EFA5B29F6C60500100DCE /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4EFA5A29F6C60500100DCE /* AddStoreView.swift */; };
 		EB6EA2F129F947FA00B4C88C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB6EA2F029F947F900B4C88C /* GoogleService-Info.plist */; };
 		EB7DC4E029FD8B1200D2DBE5 /* StoreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4DF29FD8B1100D2DBE5 /* StoreListViewModel.swift */; };
+		EB7DC4E229FDADFE00D2DBE5 /* StoreItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4E129FDADFE00D2DBE5 /* StoreItemListViewModel.swift */; };
+		EB7DC4E629FE795D00D2DBE5 /* StoreItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4E529FE795D00D2DBE5 /* StoreItemsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		EB4EFA5A29F6C60500100DCE /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
 		EB6EA2F029F947F900B4C88C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB7DC4DF29FD8B1100D2DBE5 /* StoreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewModel.swift; sourceTree = "<group>"; };
+		EB7DC4E129FDADFE00D2DBE5 /* StoreItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListViewModel.swift; sourceTree = "<group>"; };
+		EB7DC4E529FE795D00D2DBE5 /* StoreItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			children = (
 				EB4EFA5429F6C26A00100DCE /* AddStoreViewModel.swift */,
 				EB7DC4DF29FD8B1100D2DBE5 /* StoreListViewModel.swift */,
+				EB7DC4E129FDADFE00D2DBE5 /* StoreItemListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				EB4EFA5A29F6C60500100DCE /* AddStoreView.swift */,
+				EB7DC4E529FE795D00D2DBE5 /* StoreItemsListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +241,8 @@
 				EB4EFA5329F6BDAF00100DCE /* FirestoreManager.swift in Sources */,
 				EB4EFA5529F6C26A00100DCE /* AddStoreViewModel.swift in Sources */,
 				EB4EFA2E29F5B5CF00100DCE /* ContentView.swift in Sources */,
+				EB7DC4E229FDADFE00D2DBE5 /* StoreItemListViewModel.swift in Sources */,
+				EB7DC4E629FE795D00D2DBE5 /* StoreItemsListView.swift in Sources */,
 				EB4EFA2C29F5B5CF00100DCE /* GroceryStoreFirebaseApp.swift in Sources */,
 				EB4EFA4F29F676FF00100DCE /* Constants.swift in Sources */,
 				EB4EFA5B29F6C60500100DCE /* AddStoreView.swift in Sources */,

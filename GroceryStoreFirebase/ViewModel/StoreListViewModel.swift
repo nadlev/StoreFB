@@ -48,4 +48,8 @@ struct StoreViewModel {
     var location: String {
         store.location
     }
+    
+    var items: [String] {
+        store.items ?? ""
+    }
 }
