@@ -14,11 +14,20 @@ struct StoreItemsListView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter item name", text: $storeItemsListVM.groceryItemName).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Enter item name", text: $storeItemsListVM.storeItemVS.name).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            TextField("Enter price", text: $storeItemsListVM.storeItemVS.price).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            TextField("Enter quantity", text: $storeItemsListVM.storeItemVS.quantity).textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
             Button("Save") {
-                storeItemsListVM.addItemsToStore(storeId: store.storeId)
+                storeItemsListVM.addItemsToStore(storeId: store.storeId) { error in
+                    
+                }
+                //storeItemsListVM.addItemsToStore(storeId: store.storeId)
             }
             
             if let store = storeItemsListVM.store {

@@ -7,11 +7,35 @@
 
 import Foundation
 
+struct StoreItemViewState {
+    var name: String = ""
+    var price: String = ""
+    var quantity: String = ""
+}
+
+struct StoreItemViewModel {
+    let storeItem: StoreItemModel
+    
+    var name: String {
+        storeItem.name
+    }
+    
+    var price: Double {
+        storeItem.price
+    }
+    
+    var quantity: Int {
+        storeItem.quantity
+    }
+}
+
+
 class StoreItemListViewModel: ObservableObject {
     private var firestoreManager: FirestoreManager
     var groceryItemName: String = ""
     @Published var store: StoreViewModel?
     
+    var storeItemVS = StoreItemViewState()
     
     init() {
         firestoreManager = FirestoreManager()
@@ -32,7 +56,21 @@ class StoreItemListViewModel: ObservableObject {
         }
     }
     
-    func addItemsToStore(storeId: String) {
+    func addItemsToStore(storeId: String, completion: @escaping (Error?) -> Void) {
+        
+        let storeItem = StoreItemModel.from(storeItemVS)
+        firestoreManager.updateStore(storeId: storeId, storeItem: storeItem) {
+            result in
+            switch result {
+            case .success(_):
+                completion(nil)
+            case .failure(let error):
+                completion(error)
+            }
+        }
+    }
+    
+    /*func addItemsToStore(storeId: String) {
         
         firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName]]) { result in
             switch result {
@@ -47,5 +85,5 @@ class StoreItemListViewModel: ObservableObject {
                 print(error.localizedDescription)
             }
         }
-    }
+    }*/
 }

@@ -26,6 +26,7 @@
 		EB7DC4E029FD8B1200D2DBE5 /* StoreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4DF29FD8B1100D2DBE5 /* StoreListViewModel.swift */; };
 		EB7DC4E229FDADFE00D2DBE5 /* StoreItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4E129FDADFE00D2DBE5 /* StoreItemListViewModel.swift */; };
 		EB7DC4E629FE795D00D2DBE5 /* StoreItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DC4E529FE795D00D2DBE5 /* StoreItemsListView.swift */; };
+		EBCBAC7D2A0054590028AA59 /* StoreItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCBAC7C2A0054590028AA59 /* StoreItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EB7DC4DF29FD8B1100D2DBE5 /* StoreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewModel.swift; sourceTree = "<group>"; };
 		EB7DC4E129FDADFE00D2DBE5 /* StoreItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListViewModel.swift; sourceTree = "<group>"; };
 		EB7DC4E529FE795D00D2DBE5 /* StoreItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsListView.swift; sourceTree = "<group>"; };
+		EBCBAC7C2A0054590028AA59 /* StoreItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EB4EFA5029F679EE00100DCE /* StoreModel.swift */,
+				EBCBAC7C2A0054590028AA59 /* StoreItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				EB4EFA4D29F676A600100DCE /* View+Extension.swift in Sources */,
 				EB4EFA5329F6BDAF00100DCE /* FirestoreManager.swift in Sources */,
 				EB4EFA5529F6C26A00100DCE /* AddStoreViewModel.swift in Sources */,
+				EBCBAC7D2A0054590028AA59 /* StoreItemModel.swift in Sources */,
 				EB4EFA2E29F5B5CF00100DCE /* ContentView.swift in Sources */,
 				EB7DC4E229FDADFE00D2DBE5 /* StoreItemListViewModel.swift in Sources */,
 				EB7DC4E629FE795D00D2DBE5 /* StoreItemsListView.swift in Sources */,

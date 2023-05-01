@@ -35,7 +35,26 @@ class FirestoreManager {
         }
     }
     
-    func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?>, Error) -> Void) {
+    func updateStore(storeId: String, storeItem: StoreItemModel, completion: @escaping (Result<Store?, Error>) -> Void) {
+        do {
+            let _ = try db.collection("stores")
+                .document(storeId)
+                .collection("items").addDocument(from: storeItem)
+            
+            self.getStoreByID(storeId: storeId) { result in
+                switch result {
+                case .success(let store):
+                    completion(.success(store))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
+    
+    /*func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?>, Error) -> Void) {
         
         let ref = db.collection("stores").document(storeId)
         
@@ -65,7 +84,7 @@ class FirestoreManager {
             }
         }
     }
-    
+    */
     func getAllStores(completion: @escaping (Result<[Store]?, Error>) -> Void) {
         db.collection("stores")
             .getDocuments { (snapshot, error) in
