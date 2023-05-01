@@ -30,16 +30,20 @@ struct StoreItemsListView: View {
                 //storeItemsListVM.addItemsToStore(storeId: store.storeId)
             }
             
-            if let store = storeItemsListVM.store {
+            List(storeItemsListVM, id: \.name) { item in
+                Text(item.name)
+            }
+            
+            /*if let store = storeItemsListVM.store {
                 List(store.items, id: \.self) { item in
                     Text(item)
                 }
-            }
+            }*/
             
             Spacer()
             
             .onAppear(perform: {
-                storeItemsListVM.getStoreById(storeId: store.storeId)
+                storeItemsListVM.getStoreItemsBy(storeId: store.storeId)
             })
         }
     }
