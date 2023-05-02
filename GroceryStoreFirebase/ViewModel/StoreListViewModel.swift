@@ -37,6 +37,10 @@ struct StoreViewModel {
     
     let store: Store
     
+    var storeItemId: String {
+        storeItem.id ?? ""
+    }
+    
     var storeId: String {
         store.id ?? ""
     }

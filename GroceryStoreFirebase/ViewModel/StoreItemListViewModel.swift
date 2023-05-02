@@ -8,6 +8,7 @@
 import Foundation
 
 struct StoreItemViewState {
+    var id: String? = ""
     var name: String = ""
     var price: String = ""
     var quantity: String = ""
@@ -40,6 +41,14 @@ class StoreItemListViewModel: ObservableObject {
     
     init() {
         firestoreManager = FirestoreManager()
+    }
+    
+    func deleteStoreItem(storeId: String, storeItemId: String) {
+        firestoreManager.deleteStoreItem(storeId: storeId, storeItemId: storeItemId) { error in
+            if error == nil {
+                self.getStoreItemsBy(storeId: storeId)
+            }
+        }
     }
     
     func getStoreItemsBy(storeId: String) {
